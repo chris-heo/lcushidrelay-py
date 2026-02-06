@@ -1,10 +1,8 @@
 # LCUS HID relay cards
 
-Browsing AliExpress, I stumbled over LCUS "series" relay cards that can be controlled via USB HID.
+Browsing AliExpress, I stumbled over LCUS "series" relay cards that can be controlled via USB HID - not to be confused with the LCUS relay cards with USB to serial chips.
 
-Not to be confused with the LCUS relay cards with USB to serial chips, these are different things.
-
-I was intrigued, but I couldn't find ready python code.
+I was intrigued, but couldn't find ready made python code.
 
 Though, this would great for automation at work and for play. If there's no code, there gotta be code.
 
@@ -12,13 +10,10 @@ Though, this would great for automation at work and for play. If there's no code
 
 ![LCUS-4 HID relay module](img/lcus-4.jpg)
 
-Relays are the ubiquitous Songle 10A/250VAC, 10A/30VDC relays
-
-As brain of the operation, a, WCH microcontroller in SSOP-10 package is used. The marking "554EC46" didn't lead me to a specific part.
-
-Unfortunately, there is still a micro USB receptacle, I wish we could have everything-USB-C in 2026.
-
-Also available: bright red status LEDs - and to my delight they skipped the placebo optocouplers.
+- Relays are the ubiquitous Songle 10A/250VAC, 10A/30VDC.
+- As brain of the operation, a WCH microcontroller in SSOP-10 (?) package is used. The marking "554EC46" didn't lead to a specific part.
+- Unfortunately, there is still a micro USB receptacle, I wish we could have everything-USB-C in 2026.
+- Bright red status LEDs - and to my delight they skipped the placebo optocouplers.
 
 In case you're wondering about the backplate - the [STL file is available](LCUS-4_shell.stl) (printed with PETG on a Bambulab P1S).
 
@@ -65,7 +60,7 @@ rb.set_multi(0b0000, 0b0001)
 
 ## Limitations
 
-Unfortunately, the Microcontroller doesn't provide a serial number, so adressing multiple relay boards is a bit cumbersome.
+Unfortunately, the Microcontroller doesn't provide a serial number, adressing multiple relay boards will be a bit cumbersome.
 
 If a particular board is always operated at the same USB port, a mitigation could be (though not substantially tested) to use the device path - that `\\\\?\\HID#VID_5131&PID_2007...`-thing.
 
