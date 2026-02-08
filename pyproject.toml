@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lcushidrelay-py"
+version = "2026.2.0"
+description = "Python 'driver' for LCUS HID relay cards "
+dependencies = [
+    "hidapi>=0.14.0.post4"
+]
+readme = "README.md"
+license = "MIT"
+license-file = "LICENSE"
+keywords = ["lcus-1", "lcus-2", "lcus-4", "usb relay"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Automation",
+    "Intended Audience :: Electronics",
+]
+
+[project.urls]
+Homepage = "https://hobbyelektronik.org"
+Repository = "https://github.com/chris-heo/lcushidrelay-py.git"
+Issues = "https://github.com/chris-heo/lcushidrelay-py/issues"
